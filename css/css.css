@@ -46,14 +46,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-*******************************************
+/*******************************************
                 DEFAULTS
-*******************************************
+*******************************************/
 
 html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px; /* makes math easier with ems and rems */
-    color: brown;
+    color: #0FF;
     background: black;
 }
 
@@ -65,9 +65,9 @@ p{
     font-size: 1.6rem; /* 16px based on root size of 10px */
 }
 
-*******************************************
+/*******************************************
                 MAIN
-*******************************************
+*******************************************/
 
 /* style the element with the ID container */ 
 
@@ -96,4 +96,75 @@ section{
 /* style the element with the class header-image */ 
 .header-image{
     width: 100%; /* 100% of the width of whatever element this image is inside of */ 
+}
+
+/*
+.larger span{
+    width: 200px;
+    height: 100px;
+    margin: 25px;
+    padding: 15px;
+    border: 2px solid yellow;
+} */
+
+/*******************************************
+                NAV
+*******************************************/
+
+nav{
+    height: 44px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #220044;
+}
+
+nav li{
+    float: left; /* will make list elements (block elements) sit next to each other horizontally */
+}
+
+nav a{
+    display: block; /* make the anchor tags into boxes so we can do smthn interesting to them */
+    text-align: center;
+    margin: 0 5px; /* 0 on the top & bottom, 5px on the left and right */
+    text-decoration: none; /* removes underline default from the link */ 
+    width: 142px;
+    height: 44px;
+}
+
+/* target the span, inside anchor tags, inside list items, inside the nav */
+nav li a span{
+    display: block;
+    float: left;
+    font-size: 1.6rem; /* 1.6 times the root font size in HTML */
+    line-height: 2.5em; /* 2.5 times the font size of this element */
+    color: #0FF; /* remeber there is no font-color - color sets the font color */ 
+}
+
+nav a img{
+    width: 22px;
+    padding: 0.7em 5px 0 15px; 
+    /* padding and margin can be set using diff units of measurement
+        (all of which are interchangeable)
+        0.7 times the element's font size to the padding on the top
+        5px to the padding on the right
+        0 to the padding on the bottom - 0 doesnt need a unit bcs 0 is always 0
+        15px to the padding on the left
+    */
+    float: left;
+}
+
+nav a:hover, .current{
+    background: purple;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#play{
+    color: #0FF;
+    float: right; /* position on screen */
+    font-size: 2.0rem;
+    background:purple;
+    border: 1px solid #0FF;
+    border-radius: 10px; /* makes corners look rounded */ 
+    padding: 0.5em;
+    height: auto; /* override the height set on the nav a - auto asks the browser to auto calc the height based on the content inside */
 }
