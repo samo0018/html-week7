@@ -51,10 +51,11 @@ table {
                 DEFAULTS
 *******************************************
 
-
 html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px; /* makes math easier with ems and rems */
+    color: brown;
+    background: black;
 }
 
 h2{
