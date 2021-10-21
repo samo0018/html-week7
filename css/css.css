@@ -46,7 +46,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 *******************************************
                 DEFAULTS
 *******************************************
@@ -64,4 +63,37 @@ h2{
 
 p{
     font-size: 1.6rem; /* 16px based on root size of 10px */
+}
+
+*******************************************
+                MAIN
+*******************************************
+
+/* style the element with the ID container */ 
+
+#container{
+    width: 1024px;
+    margin: 0 auto; /* 0 on the top and bottom, and "auto" on the left and right
+    this will centre the element int he browser window */ 
+}
+
+section{
+    margin: 15px; /* margin is on the outside & pushes other elements away */ 
+    border: 2px solid #0FF; 
+    padding: 20px 10px 15px 25px; /* padding is on the inside and pushes content away from the edge */
+    
+    /* when you use 4 values in padding or margin, it's top, right, bottom, left */ 
+
+    /* 
+    you can style individual padding, margin and border on each side of the element: 
+    padding-top
+    padding-border
+    padding-left
+    padding-right
+    */ 
+}
+
+/* style the element with the class header-image */ 
+.header-image{
+    width: 100%; /* 100% of the width of whatever element this image is inside of */ 
 }
