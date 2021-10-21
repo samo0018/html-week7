@@ -77,23 +77,8 @@ p{
     this will centre the element int he browser window */ 
 }
 
-section{
-    margin: 15px; /* margin is on the outside & pushes other elements away */ 
-    border: 2px solid #0FF; 
-    padding: 20px 10px 15px 25px; /* padding is on the inside and pushes content away from the edge */
-    
-    /* when you use 4 values in padding or margin, it's top, right, bottom, left */ 
-
-    /* 
-    you can style individual padding, margin and border on each side of the element: 
-    padding-top
-    padding-border
-    padding-left
-    padding-right
-    */ 
-}
-
 /* style the element with the class header-image */ 
+
 .header-image{
     width: 100%; /* 100% of the width of whatever element this image is inside of */ 
 }
@@ -160,11 +145,60 @@ nav a:hover, .current{
 
 #play{
     color: #0FF;
-    float: right; /* position on screen */
+    /* float: right; position on screen */
     font-size: 2.0rem;
     background:purple;
     border: 1px solid #0FF;
     border-radius: 10px; /* makes corners look rounded */ 
     padding: 0.5em;
     height: auto; /* override the height set on the nav a - auto asks the browser to auto calc the height based on the content inside */
+
+    /* use position fixed to make this button stay on screen even when scolling */
+    position: fixed;
+    /* set its position relative to the browser window using top/bottom, left/right */
+    top: 5%;
+    right: 10%;
+}
+
+/*******************************************
+                CONTENT
+*******************************************/
+
+section{
+    margin: 2%; /* margin is on the outside & pushes other elements away */
+    border: 2px solid #0FF; 
+    padding: 20px 10px 15px 25px; /* padding is on the inside and pushes content away from the edge */
+    
+    /* when you use 4 values in padding or margin, it's top, right, bottom, left */ 
+
+    /* 
+    you can style individual padding, margin and border on each side of the element: 
+    padding-top
+    padding-border
+    padding-left
+    padding-right
+    */ 
+
+    width: 46%;
+    height: 200px;
+    float: left;
+    box-sizing: border-box; /* tell the browser to automatically calculate the size of this element 
+    including the border and padding - w the total width / height */
+}
+
+/* background color to test the article height */
+
+article{
+    background-color: rgb(63, 56, 47);
+    padding-bottom: 50px;
+}
+
+.clearfix:after{
+    content: ""; /* this and the display table below make the "after" section show up */ 
+    display: table;
+    clear: both;
+}
+
+footer{
+    clear: both; /* you can clear left or clear right if you only want to clear one direction of float */
 }
